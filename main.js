@@ -1,5 +1,5 @@
 let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
+let myHeading = document.querySelector('h2');
 
 const setUserName = () => {
     const myName = prompt('Please enter your name.');
@@ -7,14 +7,14 @@ const setUserName = () => {
         setUserName();
     }
     localStorage.setItem('name', myName);
-    myHeading.textContent = `Mozilla is cool, ${myName}`;
+    myHeading.textContent = `I love Coding, Welcome: ${myName}`;
 }
 
 if(!localStorage.getItem('name')) {
    setUserName();
 } else {
     const storedName = localStorage.getItem('name');
-    myHeading.textContent =  `Mozila is cool, ${storedName}`;
+    myHeading.textContent =  `I love Coding, Welcome: ${storedName}`;
 }
 
 myButton.addEventListener('click', () => {
